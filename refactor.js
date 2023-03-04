@@ -243,10 +243,12 @@ class interfaceActions {
         this.intervalId = undefined;
         this.gamefieldDiv = document.createElement('div');
         this.gamefieldDiv.id = "gamefield";
-        this.gamefieldDiv.style.width = "40%";
+        this.gamefieldDiv.style.width = "600px";
         this.gamefieldDiv.style.margin = "auto";
-        this.gamefieldDiv.style.marginTop = "100px";
-        this.gamefieldDiv.style.backgroundColor = "#000000";
+        this.gamefieldDiv.style.position = "absolute";
+        this.gamefieldDiv.style.top = "50%";
+        this.gamefieldDiv.style.left = "50%";
+        this.gamefieldDiv.style.transform = "translate(-50%, -50%)";
         document.body.appendChild(this.gamefieldDiv);
     }
 
@@ -369,7 +371,7 @@ class interfaceActions {
 
             this.gamefieldDiv.appendChild(divline);
         }
-        this.gamefieldDiv.style.backgroundColor = "#FF0000";
+        //this.gamefieldDiv.style.backgroundColor = "#FF0000";
     }
 }
 
@@ -413,4 +415,3 @@ intAct.createLineWithButtons();
 intAct.createGameField();
 gameField.interfaceActions = intAct;
 intAct.gameField = gameField;
-
